@@ -1,4 +1,6 @@
 {
+  "name": "soycanero-backend",
+  "version": "0.0.1",
   "scripts": {
     "commit": "cz",
     "prepare": "husky",
