@@ -1,5 +1,7 @@
 {
   "projects": {
-    "default": "soy-canero-dev"
+    "default": "soy-canero-dev",
+    "development": "soy-canero-dev",
+    "production": "soy-canero-prod"
   }
 }
