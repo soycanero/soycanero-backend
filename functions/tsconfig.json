@@ -8,7 +8,12 @@
     "outDir": "lib",
     "sourceMap": true,
     "strict": true,
-    "target": "es2017"
+    "target": "es2017",
+    "baseUrl": "./", // Necesario para que funcione el alias
+    "isolatedModules": true,
+    "paths": {
+      "@/*": ["src/*"] // Configuración del alias
+    }
   },
   "compileOnSave": true,
   "include": [

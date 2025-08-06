@@ -2,11 +2,13 @@
   "name": "functions",
   "scripts": {
     "lint": "eslint --ext .js,.ts .",
-    "build": "tsc",
-    "build:watch": "tsc --watch",
-    "serve": "npm run build && firebase emulators:start --only functions",
+    "build": "tsc && tsc-alias",
+    "build:watch": "concurrently \"tsc -w\" \"tsc-alias -w\"",
+    "serve": "npm run build && firebase emulators:start",
     "shell": "npm run build && firebase functions:shell",
     "start": "npm run shell",
+    "deploy:dev": "firebase deploy --only functions --project default",
+    "deploy:prod": "firebase deploy --only functions --project production",
     "deploy": "firebase deploy --only functions",
     "logs": "firebase functions:log"
   },
@@ -21,11 +23,13 @@
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.12.0",
     "@typescript-eslint/parser": "^5.12.0",
+    "concurrently": "^9.2.0",
     "eslint": "^8.9.0",
     "eslint-config-google": "^0.14.0",
     "eslint-plugin-import": "^2.25.4",
     "firebase-functions-test": "^3.1.0",
-    "typescript": "^4.9.0"
+    "tsc-alias": "^1.8.16",
+    "typescript": "^5.8.3"
   },
   "private": true
 }
