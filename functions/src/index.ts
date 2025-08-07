@@ -1,3 +1,4 @@
+/* eslint-disable object-curly-spacing */
 /**
  * Import function triggers from their respective submodules:
  *
@@ -7,13 +8,13 @@
  * See a full list of supported triggers at https://firebase.google.com/docs/functions
  */
 
-import {onRequest} from "firebase-functions/v2/https";
-import * as logger from "firebase-functions/logger";
+import * as admin from "firebase-admin";
+import {sendOtp} from "@/auth/send-otp";
+import {verifyOtp} from "@/auth/verify-otp";
+import {helloWorld} from "@/hello/hello";
+import {config} from "dotenv";
 
-// Start writing functions
-// https://firebase.google.com/docs/functions/typescript
+config();
+admin.initializeApp();
 
-export const helloWorld = onRequest((request, response) => {
-  logger.info("Hello logs!", {structuredData: true});
-  response.send("Hello from Firebase!");
-});
+export {helloWorld, verifyOtp, sendOtp};
