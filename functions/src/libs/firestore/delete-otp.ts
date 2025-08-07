@@ -1,3 +1,4 @@
+/* eslint-disable require-jsdoc */
 import {collections} from "@/shared/constants";
 import {CustomLogger} from "@/shared/custom-logger";
 import {DeleteOTPDto} from "@/types/otp";

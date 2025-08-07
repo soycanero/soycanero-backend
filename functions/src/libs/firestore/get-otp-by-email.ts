@@ -1,3 +1,4 @@
+/* eslint-disable require-jsdoc */
 import {GetOTPByEmailDto, OTP, OTPDoc} from "@/types/otp";
 import {
   Firestore,

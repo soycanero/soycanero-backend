@@ -1,3 +1,4 @@
+/* eslint-disable require-jsdoc */
 import {CustomLogger} from "@/shared/custom-logger";
 import {Transporter} from "nodemailer";
 import {mailTransporter} from "./transporter";

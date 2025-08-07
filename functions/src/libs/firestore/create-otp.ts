@@ -1,3 +1,4 @@
+/* eslint-disable require-jsdoc */
 import {CreateOTPDto} from "@/types/otp";
 import {
   getFirestore,

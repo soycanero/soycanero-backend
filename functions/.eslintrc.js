@@ -9,9 +9,9 @@ module.exports = {
     "plugin:import/errors",
     "plugin:import/warnings",
     "plugin:import/typescript",
-    "google",
     "plugin:@typescript-eslint/recommended",
-    "plugin:prettier/recommended", // For prettier
+    "google",
+    "plugin:prettier/recommended", // ¡Esto debe ir al final!
   ],
   parser: "@typescript-eslint/parser",
   parserOptions: {
